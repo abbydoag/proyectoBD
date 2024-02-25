@@ -1,6 +1,6 @@
 import pandas as pd
 import psycopg2 #conectar a postgres (especificamente)
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine
 
 #DB parametros
 db_params = {
@@ -18,7 +18,7 @@ conect = psycopg2.connect(
 )
 cursor = conect.cursor()
 conect.set_session(autocommit = True)
-cursor.execute("Create Database proyectoBD")
+cursor.execute("CREATE DATABASE proyectoBD")
 
 #poner los cmabios
 conect.commit()
