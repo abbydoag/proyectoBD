@@ -18,7 +18,7 @@ conect = psycopg2.connect(
 )
 cursor = conect.cursor()
 conect.set_session(autocommit = True)
-cursor.execute("CREATE DATABASE proyectoBD")
+cursor.execute("CREATE DATABASE \"proyectoBD\"")
 
 #poner los cmabios
 conect.commit()
